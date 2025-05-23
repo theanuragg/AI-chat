@@ -1,11 +1,10 @@
 import React, { useRef, useEffect, useState } from "react";
 import Image from "next/image";
-import DOMPurify from "dompurify";
 import ReactMarkdown from "react-markdown";
 import { Prism as SyntaxHighlighter } from "react-syntax-highlighter";
 import { atomDark } from "react-syntax-highlighter/dist/cjs/styles/prism";
 import { Components } from "react-markdown";
-import DebateCardPopup from "./debatcard";
+import DebateCardPopup from "./about";
 
 type Message = {
   type: "user" | "ai";
@@ -132,7 +131,6 @@ export default function Hero() {
                     "Raw data:",
                     jsonData
                   );
-                  // Continue processing other lines even if one fails
                 }
               }
             }
@@ -158,10 +156,6 @@ export default function Hero() {
     }
   };
 
-  const handleStartDebate = (leftParty: string, rightParty: string): void => {
-    console.log("Starting debate between:", leftParty, "and", rightParty);
-    setShowDebatePopup(false);
-  };
 
   useEffect(() => {
     const handleKeyDown = (e: KeyboardEvent) => {
@@ -245,22 +239,22 @@ export default function Hero() {
                   onClick={() => !isLoading && setShowDebatePopup(true)}
                 >
                   <Image src="/crab.webp" alt="" width={20} height={20} />
-                  <span className="text-gray-500 px-1">debate</span>
+                  <span className="text-gray-500 px-1">About</span>
                 </div>
 
                 <div className="absolute top-full left-1/2 transform -translate-x-1/2 mt-2 flex-col opacity-100 hidden group-hover:flex items-center">
                   <div className="w-3 h-3 bg-gray-800 rotate-45 -mb-2"></div>
                   <div className="bg-gray-800 border text-white text-xs font-mono px-3 py-2 rounded-md shadow-lg">
-                    working
+                    <span style={{ display: "inline-block", transform: "rotate(90deg)" }}>{":)"}</span>
                   </div>
                 </div>
               </div>
 
               {showDebatePopup && (
                 <DebateCardPopup
-                  debateTopic={inputText}
-                  onClose={() => setShowDebatePopup(false)}
-                  onStart={handleStartDebate}
+                  onClose={() => setShowDebatePopup(false)} onStart={function (): void {
+                    throw new Error("Function not implemented.");
+                  } }                  
                 />
               )}
 
@@ -371,10 +365,11 @@ export default function Hero() {
               </div>
 
               {showDebatePopup && (
-                <DebateCardPopup
-                  debateTopic={inputText}
-                  onClose={() => setShowDebatePopup(false)}
-                  onStart={handleStartDebate}
+                <DebateCardPopup onClose={function (): void {
+                  throw new Error("Function not implemented.");
+                } } onStart={function (): void {
+                  throw new Error("Function not implemented.");
+                } }                  
                 />
               )}
 
