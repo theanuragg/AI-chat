@@ -2,6 +2,7 @@
 import type { Metadata } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
 import { abeeZee, bagelFatOne } from './font/font';
+import { ThemeProvider } from "@/Components/landing/theme-provider";
 import "./globals.css";
 
 const geistSans = Geist({
@@ -15,8 +16,8 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "Ai DEBATE",
-  description: "place where AI debate with AI",
+  title: "AI-Chat",
+  description: "interface for AI using gemini",
   openGraph: {
     images: [
       {
@@ -37,7 +38,9 @@ export default function RootLayout({
       <body
         className={`${geistSans.variable} ${geistMono.variable} ${abeeZee.variable} ${bagelFatOne.variable} antialiased`}
       >
+        <ThemeProvider>
         {children}
+        </ThemeProvider>
       </body>
     </html>
   );
