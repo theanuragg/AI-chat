@@ -53,6 +53,59 @@
   font-size: 16px;
   line-height: 24px;
 }
+ /*
+ * this for dark mode  
+ */
+.bg-heading {
+  font-family: "42dot Sans", "42dot Sans Placeholder", sans-serif;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 24px;
+  line-height: 29px;
+  color: rgb(255, 255, 255);
+}
+.bg-text-style {
+  font-family: Inter, "Inter Placeholder", sans-serif;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 19px;
+  color: rgb(156, 151, 151);
+}
+.bg-abezee-text {
+  font-family: ABeeZee, "ABeeZee Placeholder", sans-serif !important;
+  font-style: normal !important;
+  font-weight: 400 !important;
+  font-size: 17px !important;
+  line-height: 20px !important;
+  color: rgb(255, 255, 255) !important;
+}
+
+.bg-bagel-fat-one {
+  font-family: "Bagel Fat One", sans-serif;
+  font-style: normal;
+  font-weight: 300;
+  font-size: 30px;
+  line-height: 36px;
+  color: rgb(255, 255, 255);
+}
+.bg-text-prompt {
+  font-family: '__styreneB_820c23', '__styreneB_Fallback_820c23', ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+  font-style: normal;
+  font-weight: 400;
+  color: rgb(255, 255, 255);
+  font-size: 15px;
+  line-height: 24px;
+}
+
+.bg-text-input {
+  font-family: ui-sans-serif, -apple-system, system-ui, "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol";
+  font-style: normal;
+  font-weight: 400;
+  color: #ffffff;
+  font-size: 16px;
+  line-height: 24px;
+}
 /* Tailwind Example */
 #response-container p {
   @apply text-base my-2;

@@ -17,7 +17,7 @@ export const useChat = () => {
   const sendMessage = async () => {
     if (!inputText.trim() || isLoading) return;
 
-    // Create user message with required fields for new store structure
+    
     const userMessage = { 
       type: "user" as const, 
       text: inputText,
@@ -79,7 +79,7 @@ export const useChat = () => {
               if (jsonData === "[DONE]" || line.includes("event: done")) {
                 setLoading(false);
                 updateLastMessage({ isStreaming: false });
-                // Save the session after completion
+                
                 saveCurrentSession();
                 return;
               }
@@ -108,7 +108,6 @@ export const useChat = () => {
         text: "Sorry, there was an error processing your request.",
         isStreaming: false,
       });
-      // Still save the session even if there's an error
       saveCurrentSession();
     }
   };
