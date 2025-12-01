@@ -311,8 +311,8 @@ App Structure
 ### AI Integration
 | Technology | Purpose |
 |------------|---------|
-| **Google Gemini AI** | AI model (gemini-1.5-flash) for chat responses |
-| **Streaming API** | Real-time response streaming via SSE |
+| **Google Gemini AI API** | Direct REST API integration with gemini-1.5-flash model |
+| **Server-Sent Events (SSE)** | Real-time response streaming via fetch API |
 
 ### Development Tools
 | Technology | Purpose |
